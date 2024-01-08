@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Status</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .order-container {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 80%;
+            max-width: 600px;
+        }
+
+        .order-header {
+            background-color: #3498db;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .order-content {
+            padding: 20px;
+        }
+
+        .order-status {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .status-text {
+            color: #27ae60;
+        }
+
+        .order-details {
+            margin-top: 20px;
+        }
+
+        .detail {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .detail span {
+            font-weight: bold;
+        }
+
+        .update-btn {
+            background-color: #2ecc71;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+            width: 100%;
+        }
+
+        .update-btn:hover {
+            background-color: #27ae60;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="order-container">
+        <div class="order-header">
+            <h2>Order Status</h2>
+        </div>
+        <div class="order-content">
+            <div class="order-status">
+                Status: <span class="status-text">Processing</span>
+            </div>
+            <div class="order-details">
+                <div class="detail">
+                    <span>Order ID:</span> <span>#123456</span>
+                </div>
+                <div class="detail">
+                    <span>Order Date:</span> <span>Jan 07, 2024</span>
+                </div>
+                <div class="detail">
+                    <span>Total Amount:</span> <span>$99.99</span>
+                </div>
+            </div>
+            <button class="update-btn" onclick="updateStatus()">Update Status</button>
+        </div>
+    </div>
+
+    <script>
+        function updateStatus() {
+            var statusText = document.querySelector('.status-text');
+            statusText.textContent = 'Shipped';
+            statusText.style.color = '#f39c12';
+        }
+    </script>
+</body>
+
+</html>
